@@ -6,9 +6,9 @@ for (let i = 0; i < drum.length; i++) {
 }
 
 document.addEventListener('keydown', (event) => {
-    console.log(event.key);
-    
-    switchFunction(event.key);
+    const key = event.key.toLowerCase();
+    if (!'wasdjkl'.includes(key)) return;
+    switchFunction(key);
 });
 
 function handleClick() {
